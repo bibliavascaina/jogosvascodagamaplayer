@@ -1,41 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goal Tracker</title>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Vascaína</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #002244;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .game {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .game h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .game p {
+            margin: 5px 0;
+        }
+
+        .game video {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #1d72b8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <h1>Goal Tracker</h1>
-
-  <!-- Formulário de Registro -->
-  <form id="registerForm">
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="password" placeholder="Senha" required>
-    <input type="text" id="username" placeholder="Nome de usuário" required>
-    <input type="text" id="name" placeholder="Nome completo" required>
-    <button type="submit">Registrar</button>
-  </form>
-
-  <!-- Formulário de Login -->
-  <form id="loginForm">
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="password" placeholder="Senha" required>
-    <button type="submit">Entrar</button>
-  </form>
-
-  <!-- Botão para deslogar -->
-  <button id="logoutBtn">Sair</button>
-
-  <!-- Botão para marcar jogo como assistido -->
-  <button id="markGameBtn">Marcar jogo como assistido</button>
-
-  <!-- Botão para carregar os jogos assistidos -->
-  <button id="loadWatchedGamesBtn">Carregar jogos assistidos</button>
-
-  <script src="script.js"></script>
+    <header>
+        <h1>Biblioteca Vascaína</h1>
+    </header>
+    <main>
+        <section class="game">
+            <h2>Vasco da Gama 1-1 Nova Iguaçu</h2>
+            <p><strong>Data:</strong> 11 de Janeiro de 2025</p>
+            <video controls>
+                <source src="https://drive.google.com/uc?export=download&id=112V2kYnBLgi5tzb-DDQDM80JSNTxG1Sv" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </section>
+    </main>
+    <footer>
+        <p>Siga-nos nas redes sociais:</p>
+        <p><a href="https://twitter.com/bibliavascaina" target="_blank">Twitter</a></p>
+    </footer>
 </body>
 </html>
